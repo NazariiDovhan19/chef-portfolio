@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chef Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="overlay"></div>
+
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1>Mateusz Halarewicz</h1>
+      <p>Private Chef for Exclusive Dinners & Events</p>
+      <a href="#contact" class="btn">Book a Private Dinner</a>
+    </div>
+
+    <div class="hero-photo">
+      <img src="./hero/Edited.png" alt="Chef photo">
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+  <h2>About</h2>
+  <p>
+    I create intimate fine-dining experiences for private clients, events and special occasions.
+    Every menu is individually designed to match your taste, using premium seasonal ingredients
+    and refined restaurant-level techniques.
+  </p>
+</section>
+
+<!-- SERVICES -->
+<section class="section dark">
+  <h2>Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Private Chef</h3>
+      <p>Luxury in-home dining experience tailored to you</p>
+    </div>
+    <div class="card">
+      <h3>Catering</h3>
+      <p>Elegant catering for private and corporate events</p>
+    </div>
+    <div class="card">
+      <h3>Events</h3>
+      <p>Special menus for celebrations, parties and gatherings</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section">
+  <h2>Signature Dishes</h2>
+
+  <div class="gallery-tabs">
+    <button class="tab active" data-target="starters">Starters</button>
+    <button class="tab" data-target="main">Main Course</button>
+  </div>
+
+  <!-- STARTERS -->
+  <div class="carousel active" id="starters">
+    <div class="carousel-track">
+      <img src="./starters/starter 1.jpg" alt="Starter 1">
+      <img src="./starters/starter 2.jpg" alt="Starter 2">
+      <img src="./starters/starter 3.jpg" alt="Starter 3">
+      <img src="./starters/starter 4.jpg" alt="Starter 4">
+      <img src="./starters/starter 5.jpg" alt="Starter 5">
+      <img src="./starters/starter 6.jpg" alt="Starter 6">
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="carousel" id="main">
+    <div class="carousel-track">
+      <img src="./Main Course/Main 1.jpg" alt="Main 1">
+      <img src="./Main Course/Main 2.jpg" alt="Main 2">
+      <img src="./Main Course/Main 3.jpg" alt="Main 3">
+      <img src="./Main Course/Main 4.jpg" alt="Main 4">
+      <img src="./Main Course/Main 5.jpg" alt="Main 5">
+      <img src="./Main Course/Main 6.jpg" alt="Main 6">
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section dark">
+  <h2>Contact</h2>
+
+  <div class="contact-info">
+    <p>
+      <i class="fa-brands fa-instagram"></i>
+      <a href="https://instagram.com/yourname" target="_blank" rel="noopener">@yourname</a>
+    </p>
+
+    <p>
+      <i class="fa-solid fa-envelope"></i>
+      <a href="mailto:booking@yourdomain.com">booking@yourdomain.com</a>
+    </p>
+
+    <p>
+      <i class="fa-solid fa-phone"></i>
+      <a href="tel:+447944897273">+44 7944 897273</a>
+    </p>
+  </div>
+
+  <form class="contact-form" id="contactForm">
+    <div class="form-row">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+    </div>
+
+    <textarea name="message" placeholder="Your message" required></textarea>
+
+    <button type="submit" class="btn">
+      <span class="btn-text">Send Message</span>
+      <span class="btn-loading">Sending...</span>
+    </button>
+
+    <p class="form-status" id="formStatus"></p>
+  </form>
+</section>
+
+<script>
+  // Tabs (your existing)
+  const tabs = document.querySelectorAll('.tab');
+  const carousels = document.querySelectorAll('.carousel');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      carousels.forEach(c => c.classList.remove('active'));
+
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.target).classList.add('active');
+    });
+  });
+
+  // EmailJS init
+  emailjs.init("YOUR_PUBLIC_KEY"); // <-- PUT YOUR PUBLIC KEY HERE
+
+  const form = document.getElementById("contactForm");
+  const statusEl = document.getElementById("formStatus");
+  const btn = form.querySelector("button[type='submit']");
+  const btnText = btn.querySelector(".btn-text");
+  const btnLoading = btn.querySelector(".btn-loading");
+
+  function setLoading(isLoading) {
+    btn.disabled = isLoading;
+    btnText.style.display = isLoading ? "none" : "inline";
+    btnLoading.style.display = isLoading ? "inline" : "none";
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    statusEl.textContent = "";
+    statusEl.className = "form-status";
+    setLoading(true);
+
+    try {
+      await emailjs.sendForm(
+        "YOUR_SERVICE_ID",   // <-- PUT YOUR SERVICE ID
+        "YOUR_TEMPLATE_ID",  // <-- PUT YOUR TEMPLATE ID
+        form
+      );
+
+      statusEl.textContent = "✅ Message sent successfully!";
+      statusEl.classList.add("success");
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      statusEl.textContent = "❌ Failed to send. Please try again.";
+      statusEl.classList.add("error");
+    } finally {
+      setLoading(false);
+    }
+  });
+</script>
+
+</body>
+</html>
