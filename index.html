@@ -2,193 +2,409 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chef Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Icons (Font Awesome) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <!-- EmailJS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mateusz Halarewicz | Private Chef</title>
+  <meta
+    name="description"
+    content="Luxury private dining, bespoke tasting menus, and refined in-home chef experiences for intimate dinners, celebrations, and special events."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand-mark" aria-label="Mateusz Halarewicz home">
+        <span class="brand-mark__monogram">MH</span>
+        <span class="brand-mark__text">
+          <strong>Mateusz Halarewicz</strong>
+          <small>Private Chef</small>
+        </span>
+      </a>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="overlay"></div>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#experience">Experience</a>
+        <a href="#services">Services</a>
+        <a href="#signature">Signature Dishes</a>
+        <a href="#contact">Enquire</a>
+      </nav>
 
-  <div class="hero-inner">
-    <div class="hero-text">
-      <h1>Mateusz Halarewicz</h1>
-      <p>Private Chef for Exclusive Dinners & Events</p>
-      <a href="#contact" class="btn">Book a Private Dinner</a>
+      <a href="#contact" class="btn btn--ghost header-cta">Book an Evening</a>
     </div>
+  </header>
 
-    <div class="hero-photo">
-      <img src="./hero/Edited.png" alt="Chef photo">
-    </div>
-  </div>
-</section>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-background"></div>
+      <div class="hero-gradient"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Elevated Private Dining</p>
+          <h1>
+            Bespoke fine dining experiences,
+            <span>crafted for unforgettable evenings.</span>
+          </h1>
+          <p class="hero-lead">
+            For intimate dinners, milestone celebrations, and refined gatherings, each menu is tailored
+            around your tastes, your guests, and the atmosphere you want to create.
+          </p>
 
-<!-- ABOUT -->
-<section class="section">
-  <h2>About</h2>
-  <p>
-    I create intimate fine-dining experiences for private clients, events and special occasions.
-    Every menu is individually designed to match your taste, using premium seasonal ingredients
-    and refined restaurant-level techniques.
-  </p>
-</section>
+          <div class="hero-actions">
+            <a href="#contact" class="btn">Reserve Your Date</a>
+            <a href="#signature" class="text-link">Explore the dining style</a>
+          </div>
 
-<!-- SERVICES -->
-<section class="section dark">
-  <h2>Services</h2>
-  <div class="services">
-    <div class="card">
-      <h3>Private Chef</h3>
-      <p>Luxury in-home dining experience tailored to you</p>
-    </div>
-    <div class="card">
-      <h3>Catering</h3>
-      <p>Elegant catering for private and corporate events</p>
-    </div>
-    <div class="card">
-      <h3>Events</h3>
-      <p>Special menus for celebrations, parties and gatherings</p>
-    </div>
-  </div>
-</section>
+          <div class="hero-highlights" aria-label="Service highlights">
+            <article>
+              <strong>Bespoke Menus</strong>
+              <span>Designed around the season, the occasion, and your preferences.</span>
+            </article>
+            <article>
+              <strong>Private Luxury</strong>
+              <span>Restaurant-level execution in the comfort of your home or venue.</span>
+            </article>
+            <article>
+              <strong>Effortless Hosting</strong>
+              <span>From preparation to service, every detail is handled with care.</span>
+            </article>
+          </div>
+        </div>
 
-<!-- GALLERY -->
-<section class="section">
-  <h2>Signature Dishes</h2>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-portrait-frame">
+            <img src="./hero/Edited.png" alt="Portrait of private chef Mateusz Halarewicz" class="hero-portrait" />
+          </div>
+          <div class="hero-floating-card hero-floating-card--top">
+            <span class="floating-label">Private Dining</span>
+            <strong>Intimate tasting menus, elegant service, and a calm, luxurious pace.</strong>
+          </div>
+          <div class="hero-floating-card hero-floating-card--bottom">
+            <span class="floating-label">Signature Standard</span>
+            <strong>Premium ingredients. Refined presentation. Memorable hospitality.</strong>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <div class="gallery-tabs">
-    <button class="tab active" data-target="starters">Starters</button>
-    <button class="tab" data-target="main">Main Course</button>
-  </div>
+    <section class="trust-bar">
+      <div class="container trust-bar__inner">
+        <p>Created for intimate celebrations, private homes, executive hosting, and special occasions that deserve exceptional dining.</p>
+      </div>
+    </section>
 
-  <!-- STARTERS -->
-  <div class="carousel active" id="starters">
-    <div class="carousel-track">
-      <img src="./starters/starter 1.jpg" alt="Starter 1">
-      <img src="./starters/starter 2.jpg" alt="Starter 2">
-      <img src="./starters/starter 3.jpg" alt="Starter 3">
-      <img src="./starters/starter 4.jpg" alt="Starter 4">
-      <img src="./starters/starter 5.jpg" alt="Starter 5">
-      <img src="./starters/starter 6.jpg" alt="Starter 6">
-    </div>
-  </div>
+    <section class="section section--editorial" id="experience">
+      <div class="container editorial-grid">
+        <div class="section-copy">
+          <p class="eyebrow">The Experience</p>
+          <h2>A refined dining experience in the comfort of your own setting.</h2>
+          <p>
+            This is not a restaurant brought into your home. It is a more personal, more thoughtful way to entertain — one where the menu, mood, and service are composed specifically for you.
+          </p>
+          <p>
+            Every booking is tailored with intention, from ingredient selection and pacing to the final presentation on the plate, so your guests feel looked after from the first course to the last sip.
+          </p>
+          <div class="detail-list">
+            <div>
+              <span>01</span>
+              <p>Personal consultation to shape the menu around your occasion and preferences.</p>
+            </div>
+            <div>
+              <span>02</span>
+              <p>Seasonal ingredients sourced for flavour, elegance, and premium presentation.</p>
+            </div>
+            <div>
+              <span>03</span>
+              <p>Calm, discreet execution that lets you host beautifully without the pressure.</p>
+            </div>
+          </div>
+        </div>
 
-  <!-- MAIN -->
-  <div class="carousel" id="main">
-    <div class="carousel-track">
-      <img src="./Main Course/Main 1.jpg" alt="Main 1">
-      <img src="./Main Course/Main 2.jpg" alt="Main 2">
-      <img src="./Main Course/Main 3.jpg" alt="Main 3">
-      <img src="./Main Course/Main 4.jpg" alt="Main 4">
-      <img src="./Main Course/Main 5.jpg" alt="Main 5">
-      <img src="./Main Course/Main 6.jpg" alt="Main 6">
-    </div>
-  </div>
-</section>
+        <div class="editorial-visuals">
+          <figure class="editorial-card editorial-card--large">
+            <img src="./hero/photo_2026-01-30_18-03-57.jpg" alt="Chef preparing a refined private dining experience" />
+          </figure>
+          <figure class="editorial-card editorial-card--small">
+            <img src="./starters/starter 7.jpg" alt="Elegant plated starter" />
+          </figure>
+        </div>
+      </div>
+    </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section dark">
-  <h2>Contact</h2>
+    <section class="section section--dark" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Signature Services</p>
+          <h2>Tailored to intimate evenings, meaningful celebrations, and elevated hosting.</h2>
+          <p>
+            Each format is customised to feel polished, warm, and quietly luxurious — never generic, never rushed.
+          </p>
+        </div>
 
-  <div class="contact-info">
-    <p>
-      <i class="fa-brands fa-instagram"></i>
-      <a href="https://instagram.com/yourname" target="_blank" rel="noopener">@yourname</a>
-    </p>
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="service-index">01</span>
+            <h3>Private Chef Evenings</h3>
+            <p>Multi-course in-home dining designed for couples, families, and guests who value exceptional food and intimate atmosphere.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-index">02</span>
+            <h3>Celebration Dining</h3>
+            <p>Elegant menus for birthdays, anniversaries, proposals, and special milestones that deserve a memorable culinary centrepiece.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-index">03</span>
+            <h3>Luxury Event Catering</h3>
+            <p>Refined service and beautifully presented dishes for private events, executive hosting, and sophisticated social gatherings.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <p>
-      <i class="fa-solid fa-envelope"></i>
-      <a href="mailto:booking@yourdomain.com">booking@yourdomain.com</a>
-    </p>
+    <section class="section" id="signature">
+      <div class="container">
+        <div class="section-heading section-heading--split">
+          <div>
+            <p class="eyebrow">Signature Dishes</p>
+            <h2>Plates that feel expressive, balanced, and unmistakably premium.</h2>
+          </div>
+          <p>
+            Elegant compositions, layered flavour, and presentation designed to create that first moment of silence at the table.
+          </p>
+        </div>
 
-    <p>
-      <i class="fa-solid fa-phone"></i>
-      <a href="tel:+447944897273">+44 7944 897273</a>
-    </p>
-  </div>
+        <div class="gallery-tabs" role="tablist" aria-label="Signature dish categories">
+          <button class="tab active" data-target="starters" role="tab" aria-selected="true">Starters</button>
+          <button class="tab" data-target="main" role="tab" aria-selected="false">Main Courses</button>
+        </div>
 
-  <form class="contact-form" id="contactForm">
-    <div class="form-row">
-      <input type="text" name="name" placeholder="Your name" required>
-      <input type="email" name="email" placeholder="Your email" required>
-    </div>
+        <div class="gallery-panel active" id="starters" role="tabpanel">
+          <div class="gallery-composition">
+            <figure class="gallery-item gallery-item--feature">
+              <img src="./starters/starter 1.jpg" alt="Signature starter plated with premium detail" />
+            </figure>
+            <figure class="gallery-item">
+              <img src="./starters/starter 2.jpg" alt="Refined starter presentation" />
+            </figure>
+            <figure class="gallery-item">
+              <img src="./starters/starter 3.jpg" alt="Luxury plated appetiser" />
+            </figure>
+            <figure class="gallery-item gallery-item--wide">
+              <img src="./starters/starter 4.jpg" alt="Elegant plated starter for private dining" />
+            </figure>
+            <figure class="gallery-item">
+              <img src="./starters/starter 5.jpg" alt="Seasonal starter with premium ingredients" />
+            </figure>
+            <figure class="gallery-item">
+              <img src="./starters/starter 6.jpg" alt="Fine dining starter close-up" />
+            </figure>
+          </div>
+        </div>
 
-    <textarea name="message" placeholder="Your message" required></textarea>
+        <div class="gallery-panel" id="main" role="tabpanel">
+          <div class="gallery-composition">
+            <figure class="gallery-item gallery-item--feature">
+              <img src="./Main Course/Main 1.jpg" alt="Signature main course plated for a luxury dinner" />
+            </figure>
+            <figure class="gallery-item">
+              <img src="./Main Course/Main 2.jpg" alt="Refined main course presentation" />
+            </figure>
+            <figure class="gallery-item">
+              <img src="./Main Course/Main 3.jpg" alt="Elegant main dish plated with precision" />
+            </figure>
+            <figure class="gallery-item gallery-item--wide">
+              <img src="./Main Course/Main 4.jpg" alt="Premium main course for private dining" />
+            </figure>
+            <figure class="gallery-item">
+              <img src="./Main Course/Main 5.jpg" alt="Luxury private chef entrée" />
+            </figure>
+            <figure class="gallery-item">
+              <img src="./Main Course/Main 6.jpg" alt="Restaurant-level main dish served privately" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <button type="submit" class="btn">
-      <span class="btn-text">Send Message</span>
-      <span class="btn-loading">Sending...</span>
-    </button>
+    <section class="section section--dark section--promise">
+      <div class="container promise-grid">
+        <div class="section-copy">
+          <p class="eyebrow">Why Clients Choose This Experience</p>
+          <h2>Discreet, polished, and designed to make hosting feel effortless.</h2>
+        </div>
 
-    <p class="form-status" id="formStatus"></p>
-  </form>
-</section>
+        <div class="promise-list">
+          <article>
+            <h3>Quiet confidence</h3>
+            <p>Menus and service are presented with precision and warmth, creating a high-end atmosphere without feeling staged or formal.</p>
+          </article>
+          <article>
+            <h3>Thoughtful personalisation</h3>
+            <p>Every detail is adapted to the occasion — from your guests’ preferences to the tone of the evening and the flow of each course.</p>
+          </article>
+          <article>
+            <h3>Premium sourcing</h3>
+            <p>Ingredients are selected for depth of flavour, seasonality, and visual elegance, supporting a dining experience that feels truly elevated.</p>
+          </article>
+          <article>
+            <h3>Memories that linger</h3>
+            <p>The aim is simple: plates that impress, hospitality that reassures, and an evening your guests will talk about long after it ends.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<script>
-  // Tabs (your existing)
-  const tabs = document.querySelectorAll('.tab');
-  const carousels = document.querySelectorAll('.carousel');
+    <section class="section testimonials">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Client Impression</p>
+          <h2>The kind of evening guests remember for the feeling as much as the food.</h2>
+        </div>
 
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      carousels.forEach(c => c.classList.remove('active'));
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <p>“Elegant, calm, and beautifully executed. The food felt special from the very first course, and the whole evening had a sense of occasion.”</p>
+            <span>Private Dinner Client</span>
+          </article>
+          <article class="testimonial-card">
+            <p>“Exactly the atmosphere we hoped for — refined, effortless, and memorable. Our guests were genuinely impressed by the quality and presentation.”</p>
+            <span>Celebration Host</span>
+          </article>
+          <article class="testimonial-card">
+            <p>“A luxury experience that still felt warm and personal. It transformed the night into something far more meaningful than dining out.”</p>
+            <span>Special Occasion Booking</span>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      tab.classList.add('active');
-      document.getElementById(tab.dataset.target).classList.add('active');
+    <section class="section section--contact" id="contact">
+      <div class="container contact-shell">
+        <div class="contact-intro">
+          <p class="eyebrow">Booking & Enquiries</p>
+          <h2>Let’s create an evening that feels intimate, polished, and completely your own.</h2>
+          <p>
+            Share a few details about your date, guest count, or occasion, and start the conversation for a bespoke private dining experience.
+          </p>
+
+          <div class="contact-info">
+            <p>
+              <i class="fa-brands fa-instagram"></i>
+              <a href="https://instagram.com/yourname" target="_blank" rel="noopener">@yourname</a>
+            </p>
+            <p>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:booking@yourdomain.com">booking@yourdomain.com</a>
+            </p>
+            <p>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+447944897273">+44 7944 897273</a>
+            </p>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" placeholder="Your email" required />
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label>
+              <span>Occasion</span>
+              <input type="text" name="occasion" placeholder="Anniversary, private dinner, event..." />
+            </label>
+            <label>
+              <span>Guests</span>
+              <input type="text" name="guests" placeholder="e.g. 6 guests" />
+            </label>
+          </div>
+
+          <label>
+            <span>Tell me about your evening</span>
+            <textarea name="message" placeholder="Preferred date, location, style of dining, dietary requirements, or anything else you would like to share." required></textarea>
+          </label>
+
+          <button type="submit" class="btn btn--full">
+            <span class="btn-text">Send Enquiry</span>
+            <span class="btn-loading">Sending...</span>
+          </button>
+
+          <p class="form-status" id="formStatus"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const panels = document.querySelectorAll('.gallery-panel');
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach((item) => {
+          item.classList.remove('active');
+          item.setAttribute('aria-selected', 'false');
+        });
+
+        panels.forEach((panel) => panel.classList.remove('active'));
+
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        document.getElementById(tab.dataset.target).classList.add('active');
+      });
     });
-  });
 
-  // EmailJS init
-  emailjs.init("YOUR_PUBLIC_KEY"); // <-- PUT YOUR PUBLIC KEY HERE
+    emailjs.init('YOUR_PUBLIC_KEY');
 
-  const form = document.getElementById("contactForm");
-  const statusEl = document.getElementById("formStatus");
-  const btn = form.querySelector("button[type='submit']");
-  const btnText = btn.querySelector(".btn-text");
-  const btnLoading = btn.querySelector(".btn-loading");
+    const form = document.getElementById('contactForm');
+    const statusEl = document.getElementById('formStatus');
+    const btn = form.querySelector("button[type='submit']");
+    const btnText = btn.querySelector('.btn-text');
+    const btnLoading = btn.querySelector('.btn-loading');
 
-  function setLoading(isLoading) {
-    btn.disabled = isLoading;
-    btnText.style.display = isLoading ? "none" : "inline";
-    btnLoading.style.display = isLoading ? "inline" : "none";
-  }
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    statusEl.textContent = "";
-    statusEl.className = "form-status";
-    setLoading(true);
-
-    try {
-      await emailjs.sendForm(
-        "YOUR_SERVICE_ID",   // <-- PUT YOUR SERVICE ID
-        "YOUR_TEMPLATE_ID",  // <-- PUT YOUR TEMPLATE ID
-        form
-      );
-
-      statusEl.textContent = "✅ Message sent successfully!";
-      statusEl.classList.add("success");
-      form.reset();
-    } catch (err) {
-      console.error(err);
-      statusEl.textContent = "❌ Failed to send. Please try again.";
-      statusEl.classList.add("error");
-    } finally {
-      setLoading(false);
+    function setLoading(isLoading) {
+      btn.disabled = isLoading;
+      btnText.style.display = isLoading ? 'none' : 'inline';
+      btnLoading.style.display = isLoading ? 'inline' : 'none';
     }
-  });
-</script>
 
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      statusEl.textContent = '';
+      statusEl.className = 'form-status';
+      setLoading(true);
+
+      try {
+        await emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form);
+
+        statusEl.textContent = '✅ Message sent successfully!';
+        statusEl.classList.add('success');
+        form.reset();
+      } catch (err) {
+        console.error(err);
+        statusEl.textContent = '❌ Failed to send. Please try again.';
+        statusEl.classList.add('error');
+      } finally {
+        setLoading(false);
+      }
+    });
+  </script>
 </body>
 </html>
