@@ -6,16 +6,12 @@
   <title>Chef Portfolio</title>
   <link rel="stylesheet" href="style.css">
 
-  <!-- Icons (Font Awesome) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
 <body>
 
-<!-- HERO -->
 <section class="hero">
   <div class="overlay"></div>
 
@@ -23,7 +19,10 @@
     <div class="hero-text">
       <h1>Mateusz Halarewicz</h1>
       <p>Private Chef for Exclusive Dinners & Events</p>
-      <a href="#contact" class="btn">Book a Private Dinner</a>
+      <div class="hero-actions">
+        <a href="#contact" class="btn">Book a Private Dinner</a>
+        <a href="#menus" class="btn btn-outline">Explore Seasonal Menus</a>
+      </div>
     </div>
 
     <div class="hero-photo">
@@ -32,7 +31,6 @@
   </div>
 </section>
 
-<!-- ABOUT -->
 <section class="section">
   <h2>About</h2>
   <p>
@@ -42,7 +40,6 @@
   </p>
 </section>
 
-<!-- SERVICES -->
 <section class="section dark">
   <h2>Services</h2>
   <div class="services">
@@ -61,41 +58,258 @@
   </div>
 </section>
 
-<!-- GALLERY -->
 <section class="section">
   <h2>Signature Dishes</h2>
 
   <div class="gallery-tabs">
     <button class="tab active" data-target="starters">Starters</button>
     <button class="tab" data-target="main">Main Course</button>
+   <button class="tab" data-target="Dessert">Desserts</button>
+
   </div>
 
-  <!-- STARTERS -->
+  <div class="carousel" id="Dessert">
+  <div class="carousel-track">
+    <img src="./Signature Dishes Section/desserts/1.png" alt="Dessert 1">
+    <img src="./Signature Dishes Section/desserts/2.png" alt="Dessert 2">
+    <img src="./Signature Dishes Section/desserts/3.png" alt="Dessert 3">
+    <img src="./Signature Dishes Section/desserts/4.png" alt="Dessert 4">
+    <img src="./Signature Dishes Section/desserts/5.png" alt="Dessert 5">
+    <img src="./Signature Dishes Section/desserts/6.png" alt="Dessert 6">
+
+    <img src="./Signature Dishes Section/desserts/1.png" alt="Dessert 1">
+    <img src="./Signature Dishes Section/desserts/2.png" alt="Dessert 2">
+    <img src="./Signature Dishes Section/desserts/3.png" alt="Dessert 3">
+    <img src="./Signature Dishes Section/desserts/4.png" alt="Dessert 4">
+    <img src="./Signature Dishes Section/desserts/5.png" alt="Dessert 5">
+    <img src="./Signature Dishes Section/desserts/6.png" alt="Dessert 6">
+  </div>
+</div>
+
+  <div class="carousel" id="main">
+  <div class="carousel-track">
+    <img src="./Signature Dishes Section/Main Course/Main 1.jpg" alt="Main 1">
+    <img src="./Signature Dishes Section/Main Course/Main 2.jpg" alt="Main 2">
+    <img src="./Signature Dishes Section/Main Course/Main 3.jpg" alt="Main 3">
+    <img src="./Signature Dishes Section/Main Course/Main 4.jpg" alt="Main 4">
+    <img src="./Signature Dishes Section/Main Course/Main 5.jpg" alt="Main 5">
+    <img src="./Signature Dishes Section/Main Course/Main 6.jpg" alt="Main 6">
+
+    <img src="./Signature Dishes Section/Main Course/Main 1.jpg" alt="Main 1">
+    <img src="./Signature Dishes Section/Main Course/Main 2.jpg" alt="Main 2">
+    <img src="./Signature Dishes Section/Main Course/Main 3.jpg" alt="Main 3">
+    <img src="./Signature Dishes Section/Main Course/Main 4.jpg" alt="Main 4">
+    <img src="./Signature Dishes Section/Main Course/Main 5.jpg" alt="Main 5">
+    <img src="./Signature Dishes Section/Main Course/Main 6.jpg" alt="Main 6">
+  </div>
+</div>
+
   <div class="carousel active" id="starters">
-    <div class="carousel-track">
-      <img src="./starters/starter 1.jpg" alt="Starter 1">
-      <img src="./starters/starter 2.jpg" alt="Starter 2">
-      <img src="./starters/starter 3.jpg" alt="Starter 3">
-      <img src="./starters/starter 4.jpg" alt="Starter 4">
-      <img src="./starters/starter 5.jpg" alt="Starter 5">
-      <img src="./starters/starter 6.jpg" alt="Starter 6">
+  <div class="carousel-track">
+    <img src="./Signature Dishes Section/starters/starter 1.jpg" alt="Starter 1">
+    <img src="./Signature Dishes Section/starters/starter 2.jpg" alt="Starter 2">
+    <img src="./Signature Dishes Section/starters/starter 3.jpg" alt="Starter 3">
+    <img src="./Signature Dishes Section/starters/starter 4.jpg" alt="Starter 4">
+    <img src="./Signature Dishes Section/starters/starter 5.jpg" alt="Starter 5">
+    <img src="./Signature Dishes Section/starters/starter 6.jpg" alt="Starter 6">
+
+    <img src="./Signature Dishes Section/starters/starter 1.jpg" alt="Starter 1">
+    <img src="./Signature Dishes Section/starters/starter 2.jpg" alt="Starter 2">
+    <img src="./Signature Dishes Section/starters/starter 3.jpg" alt="Starter 3">
+    <img src="./Signature Dishes Section/starters/starter 4.jpg" alt="Starter 4">
+    <img src="./Signature Dishes Section/starters/starter 5.jpg" alt="Starter 5">
+    <img src="./Signature Dishes Section/starters/starter 6.jpg" alt="Starter 6">
+  </div>
+</div>
+</section>
+
+<section id="menus" class="section dark menu-section">
+  <div class="menu-heading">
+    <h2>Seasonal Menus</h2>
+    <p>
+      Curated fine dining menus inspired by the rhythm of the seasons, featuring premium ingredients,
+      elegant technique, and balanced flavour pairings for private dining experiences.
+    </p>
+  </div>
+
+  <div class="season-tabs">
+    <button class="season-tab active" data-season="spring-menu">Spring</button>
+    <button class="season-tab" data-season="summer-menu">Summer</button>
+    <button class="season-tab" data-season="autumn-menu">Autumn</button>
+    <button class="season-tab" data-season="winter-menu">Winter</button>
+  </div>
+
+  <div class="season-menu active" id="spring-menu">
+    <div class="menu-grid">
+     <div class="menu-card fancy-hover">
+  <span class="menu-label">Starter</span>
+  <h3>Spring Selection</h3>
+
+  
+    <ul class="menu-list fancy-list">
+  <li data-img="ZDJ_1.jpg">
+    Buttermilk & asparagus panna cotta, elderflower-apple vinaigrette, charred asparagus, rye crumb
+  </li>
+
+  <li data-img="ZDJ_2_Str.jpg">
+    Confit chalk stream trout, fennel vanilla puree, compressed fennel, dill split sauce
+  </li>
+
+  <li data-img="ZDJ_3_Str.jpg">
+    Chicken liver parfait, rhubarb, crispy chicken skin, brioche
+  </li>
+
+  <li data-img="ZDJ_4_Str.jpg">
+    Pressed ox cheeks, grelot onion, blackcurrant ketchup, parsley puree
+  </li>
+
+  <li data-img="ZDJ_5_Str.jpg">
+    Cornish crab, brown crab & koji custard, elderflower compressed kohlrabi, lacto rhubarb
+  </li>
+</ul>
+  
+
+  
+</div>
+
+      <div class="menu-card">
+        <span class="menu-label">Main Course</span>
+        <h3>Spring Selection</h3>
+        <ul class="menu-list">
+          <li>Seared trout, shellfish bisque, baby fennel, carrot, confit purple potato</li>
+          <li>Koji cured chicken ballotine, morels, wild garlic, asparagus, pickled green strawberry</li>
+          <li>Potato & leek pave, BBQ hispi cabbage, purple potato espuma</li>
+          <li>Lamb rump, green onion puree, dried carrot, artichoke, wild garlic, mint pesto</li>
+          <li>Pan fried sea bass, leek barigoule, Jerusalem artichoke, miso beurre blanc, samphire</li>
+        </ul>
+      </div>
+
+      <div class="menu-card">
+        <span class="menu-label">Dessert</span>
+        <h3>Spring Selection</h3>
+        <ul class="menu-list">
+          <li>Black sesame cremeux, Alphonso mango mousse, passion fruit granita</li>
+          <li>Hibiscus & orange poached rhubarb, whipped goat yogurt, meadowsweet & miso ice cream, white chocolate-fennel seed crumb</li>
+          <li>Dark chocolate marquise, orange & chilli caramel, hazelnut praline, burnt orange & basil granita</li>
+        </ul>
+      </div>
     </div>
   </div>
 
-  <!-- MAIN -->
-  <div class="carousel" id="main">
-    <div class="carousel-track">
-      <img src="./Main Course/Main 1.jpg" alt="Main 1">
-      <img src="./Main Course/Main 2.jpg" alt="Main 2">
-      <img src="./Main Course/Main 3.jpg" alt="Main 3">
-      <img src="./Main Course/Main 4.jpg" alt="Main 4">
-      <img src="./Main Course/Main 5.jpg" alt="Main 5">
-      <img src="./Main Course/Main 6.jpg" alt="Main 6">
+  <div class="season-menu" id="summer-menu">
+    <div class="menu-grid">
+      <div class="menu-card">
+        <span class="menu-label">Starter</span>
+        <h3>Summer Selection</h3>
+        <ul class="menu-list">
+          <li>Heritage tomato tartare, dehydrated tomato, basil, balsamic granita, croutons, black olives</li>
+          <li>Cornish crab, avocado cream, cucumber, chilli & lemon gel, croutons</li>
+          <li>Diver scallops, broccoli, broad beans, gherkin ketchup</li>
+          <li>Pan fried quail glazed with fermented honey & black pepper, carrot, raisins, sherry vinegar</li>
+        </ul>
+      </div>
+
+      <div class="menu-card">
+        <span class="menu-label">Main Course</span>
+        <h3>Summer Selection</h3>
+        <ul class="menu-list">
+          <li>Honey glazed duck breast, cherry & mustard marmalade, grelot onion, radicchio, gorgonzola emulsion</li>
+          <li>Butter poached cod loin, potato mousse, sorrel velouté, charred leeks, bacon crumb, samphire</li>
+          <li>Lamb rump, courgette & basil puree, carrot, black garlic, goat’s cheese, olives crumb</li>
+          <li>Pan fried sea bass, watercress puree, broad bean & pancetta ragout, elderflower sabayon</li>
+          <li>Girolle, broad bean and truffle risotto, aged parmesan</li>
+        </ul>
+      </div>
+
+      <div class="menu-card">
+        <span class="menu-label">Dessert</span>
+        <h3>Summer Selection</h3>
+        <ul class="menu-list">
+          <li>Dark chocolate & coffee ganache, macerated cherries, cherry gel, coconut ice cream</li>
+          <li>Lavender and honey poached peach, mascarpone mousse, frangipane, peach & prosecco granita</li>
+          <li>White chocolate and camomile panna cotta, strawberry, balsamic gel, strawberry ice cream, sable</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="season-menu" id="autumn-menu">
+    <div class="menu-grid">
+      <div class="menu-card">
+        <span class="menu-label">Starter</span>
+        <h3>Autumn Selection</h3>
+        <ul class="menu-list">
+          <li>Roasted scallops, apple ketchup, turnip, pickled fennel, crispy pancetta, buttermilk & fennel split sauce</li>
+          <li>Risotto with salted peaches, cured yolk, mushroom powder, basil</li>
+          <li>Guinea fowl terrine, apricot chutney, pickled onion, radish, brioche, truffle emulsion</li>
+          <li>Chicken leg & prosciutto terrine, trompette, plum ketchup, toasted brioche, tarragon</li>
+          <li>Roasted pigeon breast, Jerusalem artichoke, pear, walnut puree, micro cress</li>
+        </ul>
+      </div>
+
+      <div class="menu-card">
+        <span class="menu-label">Main Course</span>
+        <h3>Autumn Selection</h3>
+        <ul class="menu-list">
+          <li>Slow roasted beef tenderloin, cherry & mustard marmalade, braised salsify, roasted shallot, treviso leaves</li>
+          <li>Roasted duck breast, heritage beetroot texture, fondant potato, blackberry</li>
+          <li>Pan fried sea bass, potato “risotto”, keta caviar, leeks, baby artichoke, red pepper</li>
+          <li>Confit cod loin, coco beans, chervil root puree, braised chicory, orange</li>
+          <li>Celeriac and mushroom terrine, beluga lentils, watercress puree</li>
+        </ul>
+      </div>
+
+      <div class="menu-card">
+        <span class="menu-label">Dessert</span>
+        <h3>Autumn Selection</h3>
+        <ul class="menu-list">
+          <li>Caramelized white chocolate panna cotta, banana cremeux, coffee crumb, passion fruit</li>
+          <li>Apple custard tart, chamomile crème & white chocolate fraiche ganache</li>
+          <li>Goat’s cheese cremeux, figs, black sesame crumb, lemon curd, honey granita</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="season-menu" id="winter-menu">
+    <div class="menu-grid">
+      <div class="menu-card">
+        <span class="menu-label">Starter</span>
+        <h3>Winter Selection</h3>
+        <ul class="menu-list">
+          <li>Pan seared scallops, pumpkin puree, kimchi beurre blanc, pumpkin seeds & nori crisp</li>
+          <li>Dorset crab with cucumber, pickled apple, horseradish cream, brioche</li>
+          <li>Guinea fowl terrine, pickled onion, port & bacon jam, apricot, pistachio, micro herbs</li>
+          <li>Braised beef short rib, blueberry ketchup, horseradish espuma, celeriac crisp</li>
+          <li>Truffled cauliflower velouté, hazelnut, parmesan</li>
+        </ul>
+      </div>
+
+      <div class="menu-card">
+        <span class="menu-label">Main Course</span>
+        <h3>Winter Selection</h3>
+        <ul class="menu-list">
+          <li>Beef tenderloin, root parsley puree, salted caramel shallot, black currant gel, shimeji</li>
+          <li>Pan seared duck breast, vanilla-parsnip puree, compressed pear, chicory</li>
+          <li>Sea trout, bouillabaisse jus, saffron potato, fennel, carrot</li>
+          <li>Pan fried cod, leek barigoule, smoked potato mousseline, chorizo crumb</li>
+          <li>Wild mushrooms & chestnut risotto, Jerusalem artichoke, aged parmesan</li>
+        </ul>
+      </div>
+
+      <div class="menu-card">
+        <span class="menu-label">Dessert</span>
+        <h3>Winter Selection</h3>
+        <ul class="menu-list">
+          <li>Tamarind & chilli poached pineapple, passion fruit curd, banana bread, coconut ice cream</li>
+          <li>Dark chocolate cremeux, frozen banana parfait, blood orange & Campari gel, hazelnut</li>
+          <li>Parsnip & miso cremeux, compressed apple, miso salted caramel, parsnip sponge, walnut, apple sorbet</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="section dark">
   <h2>Contact</h2>
 
@@ -133,8 +347,13 @@
   </form>
 </section>
 
+
+
+<div class="cursor-preview">
+  <img id="cursorImage" src="" alt="">
+</div>
+
 <script>
-  // Tabs (your existing)
   const tabs = document.querySelectorAll('.tab');
   const carousels = document.querySelectorAll('.carousel');
 
@@ -148,8 +367,20 @@
     });
   });
 
-  // EmailJS init
-  emailjs.init("YOUR_PUBLIC_KEY"); // <-- PUT YOUR PUBLIC KEY HERE
+  const seasonTabs = document.querySelectorAll('.season-tab');
+  const seasonMenus = document.querySelectorAll('.season-menu');
+
+  seasonTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      seasonTabs.forEach(t => t.classList.remove('active'));
+      seasonMenus.forEach(menu => menu.classList.remove('active'));
+
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.season).classList.add('active');
+    });
+  });
+
+  emailjs.init("YOUR_PUBLIC_KEY");
 
   const form = document.getElementById("contactForm");
   const statusEl = document.getElementById("formStatus");
@@ -172,8 +403,8 @@
 
     try {
       await emailjs.sendForm(
-        "YOUR_SERVICE_ID",   // <-- PUT YOUR SERVICE ID
-        "YOUR_TEMPLATE_ID",  // <-- PUT YOUR TEMPLATE ID
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
         form
       );
 
@@ -187,6 +418,28 @@
     } finally {
       setLoading(false);
     }
+  });
+</script>
+<script>
+  const items = document.querySelectorAll(".fancy-list li");
+  const preview = document.querySelector(".cursor-preview");
+  const previewImg = document.getElementById("cursorImage");
+
+  items.forEach(item => {
+    item.addEventListener("mouseenter", () => {
+      const imgName = item.getAttribute("data-img");
+      previewImg.src = "./Starter_Spring/" + imgName;
+      preview.style.opacity = "1";
+    });
+
+    item.addEventListener("mouseleave", () => {
+      preview.style.opacity = "0";
+    });
+
+    item.addEventListener("mousemove", (e) => {
+      preview.style.top = e.clientY + 20 + "px";
+      preview.style.left = e.clientX + 20 + "px";
+    });
   });
 </script>
 
