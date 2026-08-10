@@ -430,10 +430,16 @@
         statusEl.classList.add('success');
         form.reset();
       } catch (err) {
-        console.error(err);
-        statusEl.textContent = '❌ Failed to send. Please try again.';
-        statusEl.classList.add('error');
-      } finally {
+  console.error('EmailJS ERROR');
+  console.error('Status:', err.status);
+  console.error('Text:', err.text);
+  console.error(err);
+
+  statusEl.textContent =
+    '❌ Failed to send: ' + (err.text || 'Unknown error');
+
+  statusEl.classList.add('error');}
+     finally {
         setLoading(false);
       }
     });
