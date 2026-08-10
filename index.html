@@ -424,22 +424,16 @@
       setLoading(true);
 
       try {
-        await emailjs.sendForm('service_s6ie2wf', 'template_ndi6t4', form);
+        await emailjs.sendForm('service_s6ie2wf', 'template_ndii6t4', form);
 
         statusEl.textContent = '✅ Message sent successfully!';
         statusEl.classList.add('success');
         form.reset();
       } catch (err) {
-  console.error('EmailJS ERROR');
-  console.error('Status:', err.status);
-  console.error('Text:', err.text);
-  console.error(err);
-
-  statusEl.textContent =
-    '❌ Failed to send: ' + (err.text || 'Unknown error');
-
-  statusEl.classList.add('error');}
-       finally {
+        console.error(err);
+        statusEl.textContent = '❌ Failed to send. Please try again.';
+        statusEl.classList.add('error');
+      } finally {
         setLoading(false);
       }
     });
