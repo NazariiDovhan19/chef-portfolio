@@ -329,11 +329,11 @@
           <div class="contact-info">
             <p>
               <i class="fa-brands fa-instagram"></i>
-              <a href="https://instagram.com/yourname" target="_blank" rel="noopener">@yourname</a>
+              <a href="https://www.instagram.com/mateuszhalarewicz/" target="_blank" rel="noopener">@mateuszhalarewicz</a>
             </p>
             <p>
               <i class="fa-solid fa-envelope"></i>
-              <a href="mailto:booking@yourdomain.com">booking@yourdomain.com</a>
+              <a href="mailto:mathal7@yahoo.com">mathal7@yahoo.com</a>
             </p>
             <p>
               <i class="fa-solid fa-phone"></i>
@@ -381,6 +381,8 @@
     </section>
   </main>
 
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
     const tabs = document.querySelectorAll('.tab');
     const panels = document.querySelectorAll('.gallery-panel');
@@ -400,7 +402,7 @@
       });
     });
 
-    emailjs.init('YOUR_PUBLIC_KEY');
+    emailjs.init('608zNcjAduJqaKXnB');
 
     const form = document.getElementById('contactForm');
     const statusEl = document.getElementById('formStatus');
@@ -422,7 +424,7 @@
       setLoading(true);
 
       try {
-        await emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form);
+        await emailjs.sendForm('service_s6ie2wf', 'template_ndi6t4', form);
 
         statusEl.textContent = '✅ Message sent successfully!';
         statusEl.classList.add('success');
