@@ -333,7 +333,7 @@
             </p>
             <p>
               <i class="fa-solid fa-envelope"></i>
-              <a href="mailto:mathal7@yahoo.com">mathal7@yahoo.com</a>
+              <a href="mailto:matthal07@yahoo.com">matthal07@yahoo.com</a>
             </p>
             <p>
               <i class="fa-solid fa-phone"></i>
@@ -424,7 +424,19 @@
       setLoading(true);
 
       try {
-        await emailjs.sendForm('service_s6ie2wf', 'template_ndii6t4', form);
+        const templateParams = {
+  name: form.elements['name'].value,
+  email: form.elements['email'].value,
+  occasion: form.elements['occasion'].value,
+  guests: form.elements['guests'].value,
+  message: form.elements['message'].value
+};
+
+await emailjs.send(
+  'service_s6ie2wf',
+  'template_ndii6t4',
+  templateParams
+);
 
         statusEl.textContent = '✅ Message sent successfully!';
         statusEl.classList.add('success');
@@ -438,7 +450,8 @@
   statusEl.textContent =
     '❌ Failed to send: ' + (err.text || 'Unknown error');
 
-  statusEl.classList.add('error');}
+  statusEl.classList.add('error');
+}
      finally {
         setLoading(false);
       }
